@@ -1,111 +1,178 @@
-🚀 Jenkins CI Pipeline with Maven and Spring Boot
+# 🚀 Jenkins CI Pipeline with Maven and Spring Boot
 
-📌 Project Overview
-This project demonstrates a **Continuous Integration (CI) pipeline using Jenkins integrated with GitHub**. The application is a simple **Spring Boot Employee API** built using **Maven**, and Jenkins automatically builds the project whenever the pipeline runs.
+---
 
-The pipeline reads the **Jenkinsfile directly from the GitHub repository** and executes multiple stages to build the application and generate the final artifact.
+## 📌 Project Overview
 
-This project shows how modern DevOps workflows automate the process of:
+This project demonstrates a **Continuous Integration (CI) pipeline using Jenkins integrated with GitHub**.
 
-Pulling source code from GitHub
-Building the project using Maven
-Running automated tests
-Packaging the application as an executable JAR artifact
+The application used in this pipeline is a simple **Spring Boot Employee API built with Maven**. Jenkins automatically reads the **Jenkinsfile from the GitHub repository** and executes the pipeline to build and package the application.
+
+This project showcases how modern DevOps workflows automate the following processes:
+
+- Pulling source code from GitHub  
+- Building the application using Maven  
+- Running automated tests  
+- Packaging the application as an executable JAR artifact  
 
 It demonstrates a practical **CI pipeline workflow used in real DevOps environments**.
 
-⚙️ Tech Stack
-Java 17
-Spring Boot
-Maven
-Jenkins
-Git
-GitHub
+---
 
-📂 Project Structure
+## ⚙️ Tech Stack
+
+- Java 17  
+- Spring Boot  
+- Maven  
+- Jenkins  
+- Git  
+- GitHub  
+
+---
+
+## 📂 Project Structure
+
+```
 jenkins-ci
+│
 ├── Jenkinsfile
 ├── pom.xml
+├── README.md
 └── src
-├── main/java/com/example/employee
-│        ├── EmployeeApiApplication.java
-│        └── HelloController.java
-└── main/resources
-└── application.properties
+     └── main
+          ├── java/com/example/employee
+          │     ├── EmployeeApiApplication.java
+          │     └── HelloController.java
+          │
+          └── resources
+                └── application.properties
+```
 
-⚙️ Jenkins Pipeline Stages
+---
 
-The Jenkins pipeline defined in the **Jenkinsfile** contains the following stages:
+## ⚙️ Jenkins Pipeline Stages
 
-Checkout
-Pulls the source code from the GitHub repository.
+The **Jenkinsfile** defines the following pipeline stages:
 
-Build
-Compiles the application using Maven.
+### 1️⃣ Checkout
+Pulls the latest source code from the GitHub repository.
 
-Test
-Runs project tests using Maven.
+### 2️⃣ Build
 
-Package
-Packages the application and generates the final executable **JAR artifact**.
+```
+mvn compile
+```
 
-Example pipeline workflow:
+Compiles the project source code.
 
-GitHub Repository
-↓
-Jenkins Pipeline
-↓
-Checkout Source Code
-↓
-Build (mvn compile)
-↓
-Test (mvn test)
-↓
-Package (mvn package)
-↓
-Artifact Generated (.jar)
+### 3️⃣ Test
 
-▶️ How to Run Application Manually
+```
+mvn test
+```
 
-Build the project
+Runs the automated tests.
 
+### 4️⃣ Package
+
+```
 mvn package
+```
 
-Run the application
+Packages the application and generates the final **JAR artifact**.
 
+---
+
+## 🔄 CI Pipeline Workflow
+
+```
+Developer Push Code → GitHub
+           ↓
+        Jenkins
+           ↓
+        Checkout
+           ↓
+         Build
+           ↓
+          Test
+           ↓
+        Package
+           ↓
+     Artifact (.jar)
+```
+
+---
+
+## 📦 Generated Artifact
+
+After the pipeline execution, Maven generates the build artifact:
+
+```
+target/employee-api-1.0.jar
+```
+
+This artifact can later be used for **deployment to servers, containers, or cloud environments**.
+
+---
+
+## ▶️ Run Application Manually (Optional)
+
+Build the project:
+
+```
+mvn package
+```
+
+Run the application:
+
+```
 java -jar target/employee-api-1.0.jar
+```
 
-🌐 Access Endpoint
+---
 
-Open in browser:
+## 🌐 Example Endpoint
 
+If the application is executed manually, it can be accessed at:
+
+```
 http://localhost:8080/
+```
 
-Example Response
+Example response:
 
+```
 Welcome to Employee API - Jenkins CI Pipeline Working!
+```
 
-🎯 What This Project Demonstrates
+---
 
-This project demonstrates practical knowledge of:
+## 🎯 What This Project Demonstrates
 
-Jenkins CI pipeline creation
-GitHub integration with Jenkins
-Pipeline as Code using Jenkinsfile
-Maven build lifecycle
-Automated build, test, and packaging process
-Artifact generation in CI pipeline
+This project proves understanding of:
 
-💼 Why This Project Matters
+- Jenkins CI pipeline creation  
+- GitHub integration with Jenkins  
+- Pipeline as Code using **Jenkinsfile**  
+- Maven build lifecycle  
+- Automated build, test, and packaging  
+- Artifact generation in CI pipelines  
 
-This repository demonstrates how DevOps engineers automate application builds using **Continuous Integration pipelines**. It reflects real-world practices used in modern software development environments.
+---
 
-The project highlights:
+## 💼 Why This Project Matters
 
-Automated CI pipeline execution
-Source control integration with Jenkins
-Build automation using Maven
-Artifact generation for deployment pipelines
+This repository demonstrates real-world DevOps practices including:
 
-👨‍💻 Author
+- Continuous Integration (CI)  
+- Build automation  
+- Source control integration  
+- Artifact generation for deployment workflows  
+
+These are core skills required in **modern DevOps and cloud environments**.
+
+---
+
+## 👨‍💻 Author
+
 Developed as part of hands-on practice to strengthen **AWS, DevOps, and CI/CD pipeline skills**.
