@@ -58,7 +58,7 @@
         <snapshotRepository>
             <id>nexus</id>
             <name>nexus</name>
-            <url>http://13.127.73.121:8081/repository/nexus/</url>
+	    <url>http://52.66.206.82:8081/repository/nexus/</url>
         </snapshotRepository>
     </distributionManagement>
 
