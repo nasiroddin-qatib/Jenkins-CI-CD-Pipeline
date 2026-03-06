@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/nasiroddin-qatib/ci-nexus'
+                git 'https://github.com/nasiroddin-qatib/Jenkins-CI-CD-Pipeline/'
             }
         }
 
