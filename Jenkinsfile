@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/nasiroddin-khatib/jenkins-sonarqube-ci'
+                git 'https://github.com/nasiroddin-qatib/ci-nexus'
             }
         }
 
