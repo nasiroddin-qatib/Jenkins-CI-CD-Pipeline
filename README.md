@@ -4,11 +4,11 @@
 
 ## 📌 Project Overview
 
-This project demonstrates a **Continuous Integration (CI) pipeline using Jenkins integrated with GitHub and SonarQube**.
+This project demonstrate a **Continuous Integration (CI) pipeline using Jenkins integrated with GitHub and SonarQube**.
 
 The application used in this pipeline is a **Spring Boot Employee API built with Maven**.
 
-Jenkins automatically reads th **Jenkinsfile** from the GitHub repository and executes the pipeline whenever a developer pushes code to GitHub. This is achieved using a **GitHub Webhook trigger**, which automatically starts the Jenkins pipeline on every code change.
+Jenkins automatically reads the **Jenkinsfile** from the GitHub repository and executes the pipeline whenever a developer pushes code to GitHub. This is achieved using a **GitHub Webhook trigger**, which automatically starts the Jenkins pipeline on every code change.
 
 The pipeline performs **build, testing, static code analysis using SonarQube, Quality Gate validation, and artifact generation**.
 
