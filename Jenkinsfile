@@ -40,7 +40,19 @@ pipeline {
             steps {
                 sh 'mvn package'
             }
+
         }
+
+
+	stage('deploy') {
+	    steps {
+		sh 'mvn package'
+
+		}
+	}
+
+
+
 
     }
 }
